@@ -26,4 +26,8 @@
     <string name="title_activity_si">Si Hay Clases</string>
     <string name="title_activity_no">No Hay Clases</string>
     <string name="title_activity_seleccionar">¿A quien desea registrar?</string>
+
+    <!--Facebook-->
+
+    <string name="facebook_app_id" translatable="false">165878997098584</string>
 </resources>

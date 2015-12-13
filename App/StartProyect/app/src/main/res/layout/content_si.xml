@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Seleccione las Actividades"
+            android:text="¿Cuales Actividades?"
             android:textColor="?attr/colorAccent" />
     </LinearLayout>
     <LinearLayout
@@ -196,7 +196,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Finalizar"
+            android:text="Notificar"
             android:id="@+id/btnFinalizar"/>
         <Button
             android:layout_width="0dp"

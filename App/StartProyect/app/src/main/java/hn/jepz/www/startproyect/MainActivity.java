@@ -14,7 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.facebook.FacebookSdk;
 
 import java.util.Calendar;
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -88,10 +90,9 @@ public class MainActivity extends AppCompatActivity {
             String ultimoReporte =misPreferencias.getString(PREF_ULTIMO_REPORTE,"0");
             Calendar hoy = Calendar.getInstance();
             String strHoy = String.format("%d", hoy.get(Calendar.DAY_OF_YEAR)); //TODO Halar fecha de hoy en formato dd/mm/yyyy
-            Toast.makeText(this,"strHoy: " + strHoy +" UR: " + ultimoReporte,Toast.LENGTH_LONG).show();
             LinearLayout llPreguntaActividades;
             llPreguntaActividades = (LinearLayout) findViewById(R.id.llPreguntaActividades);
-            if (ultimoReporte.equals(strHoy)) {
+            if (!ultimoReporte.equals(strHoy)) {
                 llPreguntaActividades.setVisibility(View.GONE);
             } else {
                 llPreguntaActividades.setVisibility(View.VISIBLE);
@@ -143,5 +144,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        recreate();
     }
 }
