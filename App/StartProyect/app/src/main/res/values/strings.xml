@@ -6,7 +6,7 @@
     <!-- Strings related to login -->
     <string name="prompt_telefono">Telefono</string>
     <string name="prompt_nombre">Nombre</string>
-    <string name="prompt_identidad">Identidad (opcional)</string>
+    <string name="prompt_identidad">Identidad</string>
     <string name="prompt_email">Correo Electronico</string>
 
     <string name="profesor">Profesor</string>
