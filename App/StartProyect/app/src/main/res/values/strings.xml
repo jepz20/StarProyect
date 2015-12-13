@@ -23,6 +23,6 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_si">Si hay Actividades Escolares</string>
-    <string name="title_activity_no">No hay Actividades Escolares</string>
+    <string name="title_activity_si">Si Hay Clases</string>
+    <string name="title_activity_no">No Hay Clases</string>
 </resources>
