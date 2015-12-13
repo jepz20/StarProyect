@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Intent intent;
@@ -27,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+        Button btnSiActividad = (Button) findViewById(R.id.btnSiActividad);
+        Button btnNoActividad = (Button) findViewById(R.id.btnNoActividad);
+        btnSiActividad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), SiActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnNoActividad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), NoActivity.class);
+                startActivity(intent);
             }
         });
     }
