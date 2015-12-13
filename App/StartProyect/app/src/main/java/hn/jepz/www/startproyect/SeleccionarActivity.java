@@ -1,11 +1,8 @@
 package hn.jepz.www.startproyect;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.app.Activity;
 
-/**
- * Created by Depto.Sistemas on 12/12/2015.
- */
 public class SeleccionarActivity extends Activity {
 
     @Override
@@ -14,5 +11,7 @@ public class SeleccionarActivity extends Activity {
         setContentView(R.layout.activity_seleccionar);
 
 
+
     }
+
 }

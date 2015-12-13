@@ -6,12 +6,12 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -37,7 +37,8 @@ public class LoginActivity extends AppCompatActivity {
 
         TextView number = (TextView) findViewById(R.id.telefono);
         TelephonyManager tManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        number.setText(tManager.getLine1Number());
+        //number.setText(tManager.getLine1Number());
+        number.setText("89246110");
 
         TextView correo = (TextView) findViewById(R.id.email);
         String email = getEmail(this);
@@ -46,11 +47,22 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             correo.setText(null);
         }
-    }
 
-    public void cargarSeleccionarCentro(View view){
-        Intent intent = new Intent(this, SeleccionarActivity.class);
-        startActivity(intent);
+
+        Button btnSeleccionarCentro = (Button) findViewById(R.id.btnRegistrar);
+
+        btnSeleccionarCentro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showProgress(true);
+                /*
+                Intent intent = new Intent(getBaseContext(), SeleccionarActivity.class);
+                startActivity(intent);
+                */
+            }
+        });
+
+
     }
 
     static String getEmail(Context context){
