@@ -32,7 +32,9 @@
             android:label="@string/title_activity_si" />
         <activity
             android:name=".NoActivity"
-            android:label="@string/title_activity_no"></activity>
+            android:label="@string/title_activity_no" />
+        <activity android:name=".EstrellasActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>
