@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
             /**
              Si va te pasa al activity de Si hay clases
              No te pasa al activity de No hay Clases
-
              **/
+
             String ultimoReporte =misPreferencias.getString(PREF_ULTIMO_REPORTE,"0");
             Calendar hoy = Calendar.getInstance();
             String strHoy = String.format("%d", hoy.get(Calendar.DAY_OF_YEAR)); //TODO Halar fecha de hoy en formato dd/mm/yyyy
