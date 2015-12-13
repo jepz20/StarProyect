@@ -1,3 +1,4 @@
+
 package hn.jepz.www.startproyect;
 
 import android.content.Context;
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         //mFeedPrincipalAdapter = new FeedPrincipalAdapter(this,matrixcursor,0);
         //listView.setAdapter(mFeedPrincipalAdapter);
 
-        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -151,3 +152,4 @@ public class MainActivity extends AppCompatActivity {
         recreate();
     }
 }
+
