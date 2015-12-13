@@ -95,13 +95,14 @@
                 </RadioGroup>
 
             <Button
-                android:id="@+id/email_sign_in_button"
+                android:id="@+id/btnRegistrar"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold"
+                android:onClick="cargarSeleccionarCentro"
                 android:background="#34A1D6" />
 
         </LinearLayout>
