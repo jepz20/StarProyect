@@ -26,10 +26,27 @@
             android:text="@string/title_reportar"
             android:textSize="23sp"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <NumberPicker
+                android:id="@+id/npJornada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <NumberPicker
+                android:id="@+id/npGrado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <NumberPicker
+                android:id="@+id/npSeccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

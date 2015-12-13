@@ -2,17 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="400dp"
-    android:layout_height="150dp"
+    android:layout_height="250dp"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="hn.jepz.www.startproyect.EstrellasActivity">
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/ivCopa"
+            android:background="@drawable/copa"/>
+    </LinearLayout>
     <TextView
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:text="Empezando"
+        android:textAlignment="center"
         android:textSize="20sp"
         android:textColor="?attr/colorAccent"
         android:id="@+id/tituloEstrella"

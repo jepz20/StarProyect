@@ -49,7 +49,6 @@ public class LoginActivity extends AppCompatActivity {
             correo.setText(null);
         }
 
-
         Button btnSeleccionarCentro = (Button) findViewById(R.id.btnRegistrar);
 
         btnSeleccionarCentro.setOnClickListener(new View.OnClickListener() {
