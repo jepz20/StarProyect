@@ -73,13 +73,11 @@
                         android:layout_height="wrap_content"
                         android:text="@string/profesor"
                         android:id="@+id/rbtProfesor" />
-
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/estudiante"
                         android:id="@+id/rbtEstudiante" />
-
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
