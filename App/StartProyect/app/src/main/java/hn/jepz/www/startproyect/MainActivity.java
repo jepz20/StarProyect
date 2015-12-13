@@ -56,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    startActivity(intent);
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    startActivity(intent);
                 }
             });
             Button btnSiActividad = (Button) findViewById(R.id.btnSiActividad);
@@ -114,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
 
             if (ultimoReporte != hoy) {
                 //TODO mostrar layout con si o no si la ultima vez que actualizo no es hoy
->>>>>>> bca94f02a10344ce8e0f80abb7eb4ed248c7408a
             }
             //TODO tener un feed inicial de mentiritas con Fotos y comentarios de la gente si le da
             //si le da click a una foto que llame un lightbox
