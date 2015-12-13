@@ -6,14 +6,17 @@ import android.content.SharedPreferences;
 import android.database.MatrixCursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     private Intent intent;
@@ -57,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 //                    startActivity(intent);
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                    Intent intent = new Intent(getBaseContext(), SiActivity.class);
+                    startActivity(intent);
                 }
             });
             Button btnSiActividad = (Button) findViewById(R.id.btnSiActividad);
@@ -78,18 +81,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             /**
-             Si en este dia no ha dicho si hubo actividades o no Presentar el layout de SI o NO
-             Esto con un preferenceManager
-             Linear Layout
              Si va te pasa al activity de Si hay clases
              No te pasa al activity de No hay Clases
 
              **/
-            String ultimoReporte =misPreferencias.getString(PREF_ULTIMO_REPORTE,"");
-            String hoy = ""; //TODO Halar fecha de hoy en formato dd/mm/yyyy
-
-            if (ultimoReporte != hoy) {
-                //TODO mostrar layout con si o no si la ultima vez que actualizo no es hoy
+            String ultimoReporte =misPreferencias.getString(PREF_ULTIMO_REPORTE,"0");
+            Calendar hoy = Calendar.getInstance();
+            String strHoy = String.format("%d", hoy.get(Calendar.DAY_OF_YEAR)); //TODO Halar fecha de hoy en formato dd/mm/yyyy
+            Toast.makeText(this,"strHoy: " + strHoy +" UR: " + ultimoReporte,Toast.LENGTH_LONG).show();
+            LinearLayout llPreguntaActividades;
+            llPreguntaActividades = (LinearLayout) findViewById(R.id.llPreguntaActividades);
+            if (ultimoReporte.equals(strHoy)) {
+                llPreguntaActividades.setVisibility(View.GONE);
+            } else {
+                llPreguntaActividades.setVisibility(View.VISIBLE);
             }
             //TODO tener un feed inicial de mentiritas con Fotos y comentarios de la gente si le da
             //si le da click a una foto que llame un lightbox

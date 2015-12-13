@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,6 +53,8 @@ public class EstrellasActivity extends Activity {
         ivEstella4.setBackgroundResource(R.drawable.estrella_contorno);
         ImageView ivEstella5 = (ImageView) findViewById(R.id.ivEstrella5);
         ivEstella5.setBackgroundResource(R.drawable.estrella_contorno);
+        //Copa
+        ImageView ivCopa = (ImageView) findViewById(R.id.ivCopa);
         if (estrellasSi >=1) {
             ivEstella1.setBackgroundResource(R.drawable.estrella_dorada);
             mensaje = "Buen Inicio, siga reportando las actividades";
@@ -70,6 +73,7 @@ public class EstrellasActivity extends Activity {
         }
         if (estrellasSi >=5) {
             ivEstella5.setBackgroundResource(R.drawable.estrella_dorada);
+            ivCopa.setVisibility(View.VISIBLE);
             mensaje = "Ya es una escuela 5 estrellas";
         }
         TextView tvTitulo = (TextView) findViewById(R.id.tituloEstrella);

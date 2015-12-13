@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
+import java.util.Calendar;
+
 public class SiActivity extends AppCompatActivity {
     public static final String PREFERENCIAS_STAR = "PrefStarProyect";
     public static final String PREF_ULTIMO_REPORTE = "PrefUltimoReporte";
@@ -27,6 +29,11 @@ public class SiActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         setContentView(R.layout.activity_si);
         misPreferencias = getSharedPreferences(PREFERENCIAS_STAR, Context.MODE_PRIVATE);
+        Calendar hoy = Calendar.getInstance();
+        String strHoy = String.format("%d", hoy.get(Calendar.DAY_OF_YEAR)); //TODO Halar fecha de hoy en formato dd/mm/yyyy
+        SharedPreferences.Editor editor = misPreferencias.edit();
+        editor.putString(PREF_ULTIMO_REPORTE, strHoy);
+        editor.commit();
         LinearLayout llAula = (LinearLayout) findViewById(R.id.llAula);
         LinearLayout llDeporte = (LinearLayout) findViewById(R.id.llDeporte);
         LinearLayout llCultural = (LinearLayout) findViewById(R.id.llCultural);
