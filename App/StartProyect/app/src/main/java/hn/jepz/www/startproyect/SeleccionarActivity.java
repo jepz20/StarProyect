@@ -1,9 +1,10 @@
 package hn.jepz.www.startproyect;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,13 +12,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SeleccionarActivity extends Activity {
-
+    public static final String PRIMERA_VEZ_REGISTRO = "PrefPRimeraVez";
+    private SharedPreferences misPreferencias;
+    public static final String PREFERENCIAS_STAR = "PrefStarProyect";
     private SharedPreferences prefs;
     private String prefName = "spinner_value";
     int id=0;
@@ -28,21 +30,30 @@ public class SeleccionarActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar);
-
+        misPreferencias = getSharedPreferences(PREFERENCIAS_STAR, Context.MODE_PRIVATE);
         final List<String> listCentrosEducativos=new ArrayList<String>();
-        listCentrosEducativos.add("CEB 1");
-        listCentrosEducativos.add("CEB 2");
-        listCentrosEducativos.add("CEB 3");
-        listCentrosEducativos.add("CEB 4");
-        listCentrosEducativos.add("CEB 5");
+        listCentrosEducativos.add("Nueva Esperanza");
+        listCentrosEducativos.add("San Angel");
+        listCentrosEducativos.add("Rincon de Amor");
+        listCentrosEducativos.add("Ramon Rosa");
+        listCentrosEducativos.add("Jesus Es Mi Amigo");
 
         Button btnContinuar = (Button) findViewById(R.id.btnContinuar);
 
         btnContinuar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(intent);
+                if (misPreferencias.getBoolean(PRIMERA_VEZ_REGISTRO,true)){
+                    Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                    startActivity(intent);
+                    SharedPreferences.Editor editor = misPreferencias.edit();
+                    editor.putBoolean(PRIMERA_VEZ_REGISTRO,false);
+                    editor.commit();
+                } else {
+                    Intent intent = new Intent(getBaseContext(), SiActivity.class);
+                    startActivity(intent);
+                }
+
             }
         });
 
@@ -74,8 +85,6 @@ public class SeleccionarActivity extends Activity {
                 //---save the values in the EditText view to preferences---
                 editor.putInt("last_val", pos);
                 editor.commit();
-                Toast.makeText(getBaseContext(),
-                        spCentrosEducativos.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

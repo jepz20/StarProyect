@@ -47,26 +47,28 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp">
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:paddingRight="25dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/subtitle_jornadas"
                     android:textSize="16sp"
+                    android:textAlignment="center"
                     android:id="@+id/textView" />
 
                 <NumberPicker
                     android:id="@+id/npJornada"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
 
@@ -74,31 +76,14 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="25dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/subtitle_secciones"
-                    android:textSize="16sp"
-                    android:id="@+id/textView3" />
-
-                <NumberPicker
-                    android:id="@+id/npSeccion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
                     android:layout_height="wrap_content"
                     android:text="@string/subtitle_grados"
                     android:textSize="16sp"
@@ -106,7 +91,28 @@
 
                 <NumberPicker
                     android:id="@+id/npGrado"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitle_secciones"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:id="@+id/textView3" />
+
+                <NumberPicker
+                    android:id="@+id/npSeccion"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>

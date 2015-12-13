@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         misPreferencias = getSharedPreferences(PREFERENCIAS_STAR, Context.MODE_PRIVATE);
-        boolean primeraVez = misPreferencias.getBoolean(PRIMERA_VEZ_REGISTRO,false);
+        boolean primeraVez = misPreferencias.getBoolean(PRIMERA_VEZ_REGISTRO,true);
         if (primeraVez) {
             startActivity(new Intent(this, LoginActivity.class));
         } else {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 //                    startActivity(intent);
-                    Intent intent = new Intent(getBaseContext(), SiActivity.class);
+                    Intent intent = new Intent(getBaseContext(), SeleccionarActivity.class);
                     startActivity(intent);
                 }
             });
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             LinearLayout llPreguntaActividades;
             llPreguntaActividades = (LinearLayout) findViewById(R.id.llPreguntaActividades);
             if (!ultimoReporte.equals(strHoy)) {
-                llPreguntaActividades.setVisibility(View.GONE);
+                llPreguntaActividades.setVisibility(View.VISIBLE);
             } else {
                 llPreguntaActividades.setVisibility(View.VISIBLE);
             }

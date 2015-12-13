@@ -47,12 +47,12 @@ public class LoginActivity extends AppCompatActivity {
     private SharedPreferences misPreferencias;
 
     TextView number;
-    TextView nombre = (TextView) findViewById(R.id.nombre);
-    TextView identidad = (TextView) findViewById(R.id.identidad);
     TextView correo;
-    RadioButton rbtProfesor = (RadioButton) findViewById(R.id.rbtProfesor);
-    RadioButton rbtEstudiante = (RadioButton) findViewById(R.id.rbtEstudiante);
-    RadioButton rbtPadreFamilia = (RadioButton) findViewById(R.id.rbtPadreFamilia);
+    TextView nombre;
+    TextView identidad;
+    RadioButton rbtProfesor;
+    RadioButton rbtEstudiante;
+    RadioButton rbtPadreFamilia;
     private String rbtSeleccionado;
 
     @Override
@@ -61,7 +61,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-
+        nombre = (TextView) findViewById(R.id.nombre);
+        identidad = (TextView) findViewById(R.id.identidad);
+        rbtProfesor = (RadioButton) findViewById(R.id.rbtProfesor);
+        rbtEstudiante = (RadioButton) findViewById(R.id.rbtEstudiante);
+        rbtPadreFamilia = (RadioButton) findViewById(R.id.rbtPadreFamilia);
         misPreferencias = getSharedPreferences(PREFERENCIAS_STAR, Context.MODE_PRIVATE);
 
         number = (TextView) findViewById(R.id.telefono);

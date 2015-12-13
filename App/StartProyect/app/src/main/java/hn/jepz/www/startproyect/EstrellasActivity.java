@@ -57,23 +57,30 @@ public class EstrellasActivity extends Activity {
         ImageView ivCopa = (ImageView) findViewById(R.id.ivCopa);
         if (estrellasSi >=1) {
             ivEstella1.setBackgroundResource(R.drawable.estrella_dorada);
+            ivCopa.setVisibility(View.GONE);
             mensaje = "Buen Inicio, siga reportando las actividades";
         }
         if (estrellasSi >=2) {
             ivEstella2.setBackgroundResource(R.drawable.estrella_dorada);
+            ivCopa.setVisibility(View.GONE);
             mensaje = "Ya esta en el segundo paso para ser una escuela 5 Estellas";
         }
         if (estrellasSi >=3) {
             ivEstella3.setBackgroundResource(R.drawable.estrella_dorada);
+            ivCopa.setVisibility(View.VISIBLE);
+            ivCopa.setBackgroundResource(R.drawable.copa_bronce);
             mensaje = "Ha llegado a medio camino, Animos";
         }
         if (estrellasSi >=4) {
             ivEstella4.setBackgroundResource(R.drawable.estrella_dorada);
+            ivCopa.setVisibility(View.VISIBLE);
+            ivCopa.setBackgroundResource(R.drawable.copa_plata);
             mensaje = "Ya casi llega a la meta, Adelante";
         }
         if (estrellasSi >=5) {
             ivEstella5.setBackgroundResource(R.drawable.estrella_dorada);
             ivCopa.setVisibility(View.VISIBLE);
+            ivCopa.setBackgroundResource(R.drawable.copa);
             mensaje = "Ya es una escuela 5 estrellas";
         }
         TextView tvTitulo = (TextView) findViewById(R.id.tituloEstrella);
