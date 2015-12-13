@@ -113,6 +113,43 @@ public class SiActivity extends AppCompatActivity {
                 }
             }
         });
+        Button btnCompartir= (Button) findViewById(R.id.btnCompartir);
+        btnCompartir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean seleccionoAlguno = false;
+                SharedPreferences.Editor editor = misPreferencias.edit();
+                if (((CheckBox) findViewById(R.id.cbAula)).isChecked()) {
+                    int dias = misPreferencias.getInt(PREF_AULA,0);
+                    editor.putInt(PREF_AULA, dias + 1);
+                    seleccionoAlguno = true;
+                }
+                if (((CheckBox) findViewById(R.id.cbDeporte)).isChecked()) {
+                    editor.putBoolean(PREF_DEPORTES,true);
+                    seleccionoAlguno = true;
+                }
+                if (((CheckBox) findViewById(R.id.cbCultural)).isChecked()) {
+                    editor.putBoolean(PREF_CULTURAL,true);
+                    seleccionoAlguno = true;
+                }
+                if (((CheckBox) findViewById(R.id.cbCiencia)).isChecked()) {
+                    editor.putBoolean(PREF_CIENCIA,true);
+                    seleccionoAlguno = true;
+                }
+                if (((CheckBox) findViewById(R.id.cbIntercambio)).isChecked()) {
+                    editor.putBoolean(PREF_INTERCAMBIO,true);
+                    seleccionoAlguno = true;
+                }
+                editor.commit();
+                if (seleccionoAlguno) {
+                    startActivity(new Intent(getBaseContext(), ComparteActivity.class));
+                } else {
+                    Snackbar.make(v, "Porfavor seleccione al menos una actividad", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+            }
+        });
     }
 
 }
