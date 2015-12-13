@@ -33,9 +33,12 @@
         <activity
             android:name=".NoActivity"
             android:label="@string/title_activity_no" />
+        <activity android:name=".EstrellasActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        android:label="@string/title_activity_no"/>
         <activity
             android:name=".SeleccionarActivity"
-            android:label="@string/title_activity_seleccionar" >
+            android:label="@string/title_activity_seleccionar">
         </activity>
     </application>
 
