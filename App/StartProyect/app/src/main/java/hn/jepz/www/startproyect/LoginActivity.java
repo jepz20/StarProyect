@@ -6,6 +6,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
@@ -45,6 +46,11 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             correo.setText(null);
         }
+    }
+
+    public void cargarSeleccionarCentro(View view){
+        Intent intent = new Intent(this, SeleccionarActivity.class);
+        startActivity(intent);
     }
 
     static String getEmail(Context context){

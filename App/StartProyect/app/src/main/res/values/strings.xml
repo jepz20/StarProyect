@@ -25,4 +25,5 @@
     </string>
     <string name="title_activity_si">Si Hay Clases</string>
     <string name="title_activity_no">No Hay Clases</string>
+    <string name="title_activity_seleccionar">¿A quien desea registrar?</string>
 </resources>

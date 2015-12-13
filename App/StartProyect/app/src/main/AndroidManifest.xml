@@ -32,7 +32,11 @@
             android:label="@string/title_activity_si" />
         <activity
             android:name=".NoActivity"
-            android:label="@string/title_activity_no"></activity>
+            android:label="@string/title_activity_no"/>
+            <activity
+                android:name=".SeleccionarActivity"
+                android:label="@string/title_activity_seleccionar">
+        </activity>
     </application>
 
 </manifest>
