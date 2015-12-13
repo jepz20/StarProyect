@@ -26,6 +26,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/boton_list"
         android:id="@+id/llAula">
         <ImageView
             android:layout_width="0dp"
@@ -57,6 +59,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/boton_list"
         android:id="@+id/llDeporte">
         <ImageView
             android:layout_width="0dp"
@@ -88,6 +92,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/boton_list"
         android:id="@+id/llCultural">
         <ImageView
             android:layout_width="0dp"
@@ -119,6 +125,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/boton_list"
         android:id="@+id/llCiencia">
         <ImageView
             android:layout_width="0dp"
@@ -150,6 +158,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/boton_list"
         android:id="@+id/llIntercambio">
         <ImageView
             android:layout_width="0dp"

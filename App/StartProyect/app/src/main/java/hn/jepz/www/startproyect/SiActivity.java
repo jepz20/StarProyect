@@ -27,6 +27,34 @@ public class SiActivity extends AppCompatActivity {
                 cb.setChecked(!cb.isChecked());
             }
         });
+        llDeporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox cb = (CheckBox) findViewById(R.id.cbDeporte);
+                cb.setChecked(!cb.isChecked());
+            }
+        });
+        llCultural.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox cb = (CheckBox) findViewById(R.id.cbCultural);
+                cb.setChecked(!cb.isChecked());
+            }
+        });
+        llCiencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox cb = (CheckBox) findViewById(R.id.cbCiencia);
+                cb.setChecked(!cb.isChecked());
+            }
+        });
+        llIntercambio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox cb = (CheckBox) findViewById(R.id.cbIntercambio);
+                cb.setChecked(!cb.isChecked());
+            }
+        });
     }
 
 }
